@@ -1,0 +1,40 @@
+# TC_02 - Accessibility: font size scaling [iOS]
+
+## Preconditions:
+- Enable the feature flag for Large Fonts support on the Transaction History screen
+
+## Test Steps:
+1. Open iOS Settings
+2. Go to Display & Brightness → Text Size
+3. Increase font size to maximum
+4. Open banking app
+5. Navigate through Transaction History screen
+
+## Expected Result:
+- Text is readable and not cut off
+- No UI overlap or broken layout
+- Buttons remain clickable
+- No horizontal scrolling appears
+- All key actions remain accessible
+
+## Notes:
+- App should support dynamic font scaling (accessibility compliance)
+
+# TC_02 - Accessibility: font size scaling [Android]
+
+## Preconditions:
+- Enable the feature flag for Large Fonts support on the Transaction History screen
+
+## Test Steps (Android):
+1. Open Settings
+2. Go to Display → Font size
+3. Set font to largest option
+4. Open banking app
+5. Navigate through Transaction History screen
+
+## Expected Result:
+- Text is readable and not cut off
+- No UI overlap or broken layout
+- Buttons remain clickable
+- No horizontal scrolling appears
+- All key actions remain accessible

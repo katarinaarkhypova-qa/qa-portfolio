@@ -1,0 +1,20 @@
+# TC_01 – Bank transfer between own accounts (valid scenario)
+
+## Preconditions:
+- User is logged in to the mobile banking app
+- User has at least 2 active accounts
+
+## Test Steps:
+1. Open banking app
+2. Go to "Transfers"
+3. Select "Between own accounts"
+4. Choose source account
+5. Choose destination account
+6. Enter amount (e.g. 100 PLN)
+7. Tap "Confirm"
+
+## Expected Result:
+- Transfer is successfully completed
+- Balance is updated in both accounts
+- Confirmation message is displayed
+- Transaction appears in history
