@@ -1,0 +1,16 @@
+# Title: Negative Testing – Express International Transfer
+
+### 💰 Equivalence Partitioning (EP) & Boundary Value Analysis (BVA) – Amount Limits
+- [ ] **BVA (Below minimum amount):** Attempt to initiate a transfer with an amount of **9.99 EUR / 9.99 USD** -> *Expected Result:* The "Next" button is disabled, or a validation error for the minimum amount is displayed.
+- [ ] **BVA (Zero value):** Attempt to enter an amount of **0.00 EUR / USD** -> *Expected Result:* An error message appears, preventing the user from proceeding.
+- [ ] **BVA (Negative value):** Attempt to enter a negative amount e.g., **-10.00 EUR** -> *Expected Result:* The input field does not accept the minus sign, or it immediately flags the field as invalid.
+- [ ] **BVA (Exceeding daily limit):** Attempt to initiate a transfer with an amount of **5 000.01 EUR** -> *Expected Result:* An error message stating that the daily limit for express transfers has been exceeded is displayed.
+- [ ] **EP (Insufficient funds for fee):** Attempt to transfer funds when the account balance is exactly 10.00 EUR and the transfer amount is 10.00 EUR (missing the 2.00 EUR required for the fee) -> *Expected Result:* Transaction is declined with an "Insufficient funds to cover the transfer fee" message.
+
+### 🔒 Security – Authorization & PIN Validation
+- [ ] **Incorrect PIN (Attempts 1 & 2):** Enter an invalid PIN code when confirming the transaction -> *Expected Result:* An "Incorrect PIN" message is displayed, showing the number of remaining attempts.
+- [ ] **PIN Account Lockout (Attempt 3):** Enter an incorrect PIN code three times in a row -> *Expected Result:* The transaction is aborted, and express transfer functionality is locked for 24 hours.
+- [ ] **Post-lockout attempt:** Attempt to access the transfer form immediately after the PIN lockout -> *Expected Result:* The application immediately displays a lockout screen with a countdown timer.
+
+### 👥 Business Rules & Permissions
+- [ ] **Unauthorized account type:** Attempt to initiate an express transfer from a "Standard" account -> *Expected Result:* The feature is hidden/disabled, or a warning message appears stating that a Premium account is required.

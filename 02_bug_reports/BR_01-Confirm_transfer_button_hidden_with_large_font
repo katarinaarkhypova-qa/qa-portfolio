@@ -1,0 +1,28 @@
+# Summary: [iOS] "CVV" button is not accessible with maximum font size enabled
+
+## Environment:
+build 1.888.0 (3443)
+
+## Preconditions: 
+1. User is logged in.
+2. Maximum font size is enabled in iOS Accessibility Settings.
+
+## Steps to Reproduce:
+1. Log in and navigate to the Home screen.
+2. Open the Account Details screen.
+3. Tap on the CVV button.
+
+## Actual Result:
+- The “CVV” button is partially hidden and not fully tappable.
+
+## Expected Result:
+- The “CVV” button should remain fully visible and accessible regardless of system font size settings.
+
+## Severity:
+- High
+
+## Priority:
+- High
+
+## Attachments:
+- Screenshot_TransferScreen_iOS18.png
