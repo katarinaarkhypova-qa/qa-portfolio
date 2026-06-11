@@ -1,1 +1,32 @@
+# Summary: [Express Transfer][Android] App freeze when user enters 0.00 EUR transfer amount
 
+## Environment: 
+Stage (Android 13, App version v3.4.2-rc1)
+
+## Preconditions:
+1. The user has an active Premium account tier.
+2. The user is logged in to the application.
+3. The user's account balance is positive (at least > 10.00 EUR) to display the transfer form correctly.
+4. The device is connected to the Internet (Stage environment network).
+
+## Steps to Reproduce:
+1. Log in to the Android mobile app using a Premium account.
+2. Navigate to the "Express International Transfer" 3. feature.
+4. Enter 0.00 in the transfer amount field and select EUR as the currency.
+5. Click the "Next" button.
+
+## Actual Result:
+The application freezes completely and becomes unresponsive. The user is forced to kill the app process. Logcat displays a (java.lang.ArithmeticException: divide by zero error). 
+
+## Expected Result:
+The "Next" button should be disabled for a 0.00 amount, or a clear validation message should appear (e.g., "Amount must be greater than 10.00"). The application must remain responsive.
+
+## Priority: High
+
+## Severity: Major
+
+## Logs / Attachments:
+[ERROR] 2026-06-11 09:45:11 - MobileApp - ExpressTransferFragment:
+java.lang.ArithmeticException: divide by zero
+   at com.bankapp.transfer.Calculator.calculateCommission(Calculator.java:42)
+   at com.bankapp.transfer.ExpressTransferFragment.onNextClicked(ExpressTransferFragment.java:105)
