@@ -1,0 +1,7 @@
+curl --location --request PUT 'https://httpbin.org/put' \
+--header 'Content-Type: application/json' \
+--data '{
+    "card_id": "9981-CARD",
+    "daily_withdrawal_limit": 50000,
+    "online_transaction_limit": 25000
+}'

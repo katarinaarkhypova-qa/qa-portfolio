@@ -1,0 +1,7 @@
+curl --location 'https://httpbin.org/post' \
+--header 'Content-Type: application/json' \
+--data '{
+       "amount": 150000, 
+       "currency": "UAH",
+       "recipient_iban": "UA123456789012345678901234"
+   }'
