@@ -20,8 +20,7 @@ To demonstrate my practical skills, I have included **sample test artifacts (Tes
 
 ### [03_checklists](./03_checklists)
 
-### [04_API_tests] (./04_API_tests) - FinTech (cURL)
----
+### [04_API_tests](https://github.com/katarinaarkhypova-qa/qa-portfolio/tree/main/04_API_tests) - FinTech (cURL)
 
 ## Technical Skills
 
