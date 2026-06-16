@@ -3,6 +3,18 @@
 ## Environment:
 Production (iOS 17, App version v3.4.2)
 
+## Assignee: C**** D****
+
+## Reporter: Kateryna Arkhypova
+
+## Epic Link: EXPRES_TRNS
+
+## Team: ****
+
+## Sprint: actual realise 334
+
+## Components: card_details 
+
 ## Preconditions: 
 1. User is logged in.
 2. Maximum font size is enabled in iOS Accessibility Settings.
@@ -14,7 +26,7 @@ Production (iOS 17, App version v3.4.2)
 4. On the pop-up modal "Transfer will be processed on the next business day. Do you want to continue?", click the [Yes] button.
 
 ## Actual Result:
-The application crashes to the home screen. Crashlytics logs show [NSInvalidArgumentException] due to a missing [ScheduledDate] parameter.
+- The application crashes to the home screen. Crashlytics logs show [NSInvalidArgumentException] due to a missing [ScheduledDate] parameter.
 
 ## Expected Result:
 - The transfer should be accepted and scheduled for the next business day. The app should display a success screen, not crash.

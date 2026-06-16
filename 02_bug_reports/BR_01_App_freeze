@@ -3,6 +3,18 @@
 ## Environment: 
 Stage (Android 13, App version v3.4.2-rc1)
 
+## Assignee: A**** B****
+
+## Reporter: Kateryna Arkhypova
+
+## Epic Link: EXPRES_TRNS
+
+## Team: ****
+
+## Sprint: actual realise 331
+
+## Components: card_details 
+
 ## Preconditions:
 1. The user has an active Premium account tier.
 2. The user is logged in to the application.
